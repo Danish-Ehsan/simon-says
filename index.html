@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simon Says</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css/resets.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="https://use.typekit.net/slt6kzn.css">
+
+	<script
+ 		src="https://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+ 		crossorigin="anonymous">
+ 	</script>
+</head>
+
+<body>
+	<div id="container">
+		<div id="game">
+			<div id="buttons">
+				<div class="button" id="red"></div>
+				<div class="button" id="blue"></div>
+				<div class="button" id="green"></div>
+				<div class="button" id="yellow"></div>
+			</div>
+			<div id="center">
+				<div id="counterScreen"><div id="userCnt" class="counter smlCounter">--</div><div id="MainCnt" class="counter">--</div><div id="limitCnt" class="counter smlCounter">--</div></div>
+				<div id="modeButtons">
+					<div class="modeBtnCont"><div id="play" class="modeButton"><img class="btnImg" src="images/power.png"></div><span>Play</span></div>
+					<div class="modeBtnCont"><div id="strict" class="modeButton"><img class="btnImg" src="images/uparrow.png"></div><span>Strict</span></div>
+					<div class="modeBtnCont"><div id="alt" class="modeButton"><img class="btnImg" src="images/downarrow.png"></div><span>Rnd</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/game.js"></script>
+</body>
+
+</html>
