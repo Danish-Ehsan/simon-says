@@ -18,6 +18,7 @@
 
 <body>
 	<div id="container">
+		<header><h1>Not Simon Says</h1></header>
 		<div id="game">
 			<div id="buttons">
 				<div class="button" id="red"></div>
@@ -34,9 +35,36 @@
 				</div>
 			</div>
 		</div>
+		<div id="instructions-cont">
+			<div class="how-to-play">
+				<h2 class="js--instructions__title">How to play <span class="dropdown-arrow">▼</span></h2>
+				<div class="instructions__copy-cont">
+					<p>Press the <span class="green text-button">Play</span> button to begin. The objective of the game is to repeat the pattern of button presses shown to you at the start of each round. Each time you succeed in replicating the pattern, an extra step is added to the end of the pattern. Beat the game by completing the length of the pattern defined by the win limit.</p>
+				</div>
+			</div>
+			<div class="modes">
+				<h2 class="js--instructions__title">Modes <span class="dropdown-arrow">▼</span></h2>
+				<div class="instructions__copy-cont">
+					<p><span class="weight-700">Standard:</span><br>
+	Press the <span class="green text-button">Play</span> button to begin. In standard mode, if you fail to repeat the pattern, the pattern will be played again and then you will have another chance to replicate the pattern.<br><br>
+
+	<span class="weight-700">Strict:</span><br>
+	Activate at any time by pressing the <span class="red text-button">Strict</span> button. In strict mode if you fail to repeat the pattern the game will end and you will have to start over from the beginning.<br><br>
+
+	<span class="weight-700">Random:</span><br>
+	Activated by pressing the <span class="yellow text-button">Rnd</span> button. In Random mode, each round will contain a new randomly generated pattern. The length of the random pattern will increase by 1 after each successful round.</p></div>
+			</div>
+			<div class="win-limit">
+				<h2 class="js--instructions__title">Change Win Limit <span class="dropdown-arrow">▼</span></h2>
+				<div class="instructions__copy-cont">
+					<p>In order to change the win limit, hold the <span class="green text-button">Play</span> button until the button and the win limit number begins to blink. Use the <span class="red text-button">Strict</span> and <span class="yellow text-button">Rnd</span> buttons to increase or decrease the win limit respectively. Press the <span class="green text-button">Play</span> button again to save the win limit and begin a new game.</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script type="text/javascript" src="js/game.js"></script>
+	<script type="text/javascript" src="js/instructions.js"></script>
 </body>
 
 </html>

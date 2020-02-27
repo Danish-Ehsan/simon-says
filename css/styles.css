@@ -2,24 +2,35 @@ html, body {
 	background-color: #3b5346;
 	position: relative;
 	width: 100%;
-	height: 100%;
+	font-family: "acumin-pro-condensed";
 }
 
 #container {
 	position: relative;
-	height: 100%;
+}
+
+header {
+	width: 500px;
+	margin: 0 auto;
+	background-color: #2b2b2a;
+	text-align: center;
+	margin-top: 50px;
+}
+
+h1 {
+	font-size: 45px;
+	font-weight: 700;
+	padding: 20px 50px;
+	color: #cfd0d0;
+	text-transform: uppercase;
 }
 
 #game {
 	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
+	margin: 40px auto;
 	width: 500px;
 	height: 500px;
-	background-color: #332c2b;
-	margin: 0 auto;
+	background-color: #2b2b2a;
 	border-radius: 50%;
 	box-shadow: 3px 3px 15px 2px #332c2b, 3px 3px 10px 2px #7f7e80 inset;
 }
@@ -40,6 +51,7 @@ html, body {
 	height: 42.5%;
 	position: relative;
 	display: inline-block;
+	cursor: pointer;
 }
 
 #red {
@@ -173,12 +185,10 @@ html, body {
 }
 
 .modeBtnCont span {
-	font-family: "acumin-pro-condensed";
 	font-weight: 500;
 	color: white;
 	font-size: 15px;
 	letter-spacing: 0.8px;
-
 }
 
 .modeButton {
@@ -188,6 +198,7 @@ html, body {
 	border-radius: 4px;
 	margin: 0 auto 6px auto;
 	box-shadow: 0 0 4px 2px #261e1c;
+	cursor: pointer;
 }
 
 .btnImg {
@@ -234,3 +245,132 @@ html, body {
 	border: 3px solid #ce3554;
 }
 
+
+
+#instructions-cont {
+	width: 500px;
+	box-sizing: border-box;
+	color: #cfd0d0;
+	margin: 0 auto 50px auto;
+}
+
+#instructions-cont>* {
+	margin: 5px 0;
+}
+
+#instructions-cont h2 {
+	padding: 15px 50px;
+	background-color: #2b2b2a;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0.8px;
+	cursor: pointer;
+}
+
+.instructions__copy-cont {
+	max-height: 0;
+	overflow: scroll;
+	transition: max-height 1s;
+}
+
+.instructions__copy-cont--open {
+	max-height: 300px;
+}
+
+#instructions-cont p {
+	padding: 25px 50px;
+	background-color: #201d1f;
+	line-height: 1.3;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+.dropdown-arrow {
+	display: inline-block;
+	font-size: 8px;
+	position: relative;
+	bottom: 2px;
+	left: 2px;
+}
+
+.dropdown-arrow--open {
+	transform: rotate(180deg);
+}
+
+.text-button {
+	text-transform: uppercase;
+	font-size: 95%;
+	font-weight: 700;
+}
+
+.red {
+	color: #ab3822;
+}
+
+.green {
+	color: #5a8f2b;
+}
+
+.yellow {
+	color: #cdab22;
+}
+
+.weight-700 {
+	font-weight: 700;
+}
+
+@media screen and (max-width: 550px) {
+
+	header {
+		width: 100%;
+		margin-top: 0;
+		padding-top: 30px;
+	}
+
+	#game {
+		width: 320px;
+		height: 320px;
+	}
+
+	#counterScreen {
+		margin-bottom: 2px;
+	}
+
+	.smlCounter {
+		font-size: 10px;
+		width: 20px;
+	}
+
+	#MainCnt {
+		font-size: 26px;
+		top: 18px;
+	}
+
+	.modeButton {
+		width: 12px;
+		height: 12px;
+		border-width: 2px;
+		margin-bottom: 0;
+	}
+
+	.modeBtnCont span {
+		font-size: 10px;
+		font-weight: 600;
+		position: relative;
+		bottom: 2px;
+	}
+
+	.btnImg {
+		vertical-align: top;
+	}
+
+	#play.active, #strict.active, #alt.active {
+		border-width: 2px;
+	}
+
+	#instructions-cont {
+		width: 100%;
+		margin-bottom: 0;
+	}
+
+}

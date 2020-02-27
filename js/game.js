@@ -49,7 +49,14 @@ $(function(){
 	});
 
 
-	$play.on('mousedown', function() {
+	$play.on('mousedown', startSettingsTimer);
+	$play.on('touchstart', startSettingsTimer);
+
+	$play.on('mouseup', startGame);
+	$play.on('touchend', startGame);
+
+	function startSettingsTimer(e) {
+		e.preventDefault();
 		$this = $(this);
 		if (setting === false) {
 			settingTimer = setTimeout (function() {
@@ -57,14 +64,15 @@ $(function(){
 				setting = true;
 				$play.addClass('setting');
 				$limitCnt.addClass('setting').text(winLimit);
-			}, 1000);
+			}, 400);
 		} else if (setting === true) {
 			clearTimeout(settingTimer);
 			setting = false;
 		}
-	});
+	}
 
-	$play.on('mouseup', function() {
+	function startGame(e) {
+		e.preventDefault();
 		console.log('key length= ' + key.length);
 		if (setting === false && key.length < 1) {
 			clearTimeout(settingTimer);
@@ -75,7 +83,7 @@ $(function(){
 			console.log('testing3');
 			reset();
 		}
-	});
+	}
 
 
 	function init() {
